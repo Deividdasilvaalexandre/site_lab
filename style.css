@@ -1,0 +1,95 @@
+/* ==========================================
+    CONFIGURAÇÕES GERAIS (Reset & Cores)
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bg-principal: #0f172a;    /* Azul escuro sofisticado */
+    --bg-card: #1e293b;         /* Azul um pouco mais claro para contraste */
+    --texto-principal: #f8fafc; /* Branco suave */
+    --texto-secundario: #94a3b8;/* Cinza claro para detalhes */
+    --detalhe: #38bdf8;          /* Azul brilhante para links e botões */
+    --borda-suave: #334155;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ==========================================
+    LAYOUT DO CONTAINER PRINCIPAL
+   ========================================== */
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--borda-suave);
+    margin-top: 40px;
+}
+
+/* ==========================================
+    TIPOGRAFIA (Títulos e Textos)
+   ========================================== */
+h1 {
+    font-size: 2.5rem;
+    color: var(--texto-principal);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+p {
+    color: var(--texto-secundario);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* ==========================================
+    ESTILIZAÇÃO DAS IMAGENS (Segura e Bonita)
+   ========================================== */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    /* Se a imagem sumir ou quebrar, o CSS abaixo garante que não estrague o layout */
+    background-color: var(--borda-suave);
+    min-height: 150px; 
+}
+
+/* ==========================================
+    BOTÕES E LINKS
+   ========================================== */
+.btn {
+    display: inline-block;
+    background-color: var(--detalhe);
+    color: var(--bg-principal);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #7dd3fc; /* Tom mais claro no hover */
+    transform: translateY(-2px); /* Efeito flutuante */
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
