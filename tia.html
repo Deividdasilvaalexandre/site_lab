@@ -31,16 +31,6 @@
                     <!-- Botões de navegação -->
                     <button class="botao botao-anterior" onclick="mudarImagem(-1)">❮</button>
                     <button class="botao botao-proximo" onclick="mudarImagem(1)">❯</button>
-
-                    <!-- Indicadores (pontos) -->
-                    <div class="indicadores">
-                        <span class="indicador ativo" onclick="irPara(0)"></span>
-                        <span class="indicador" onclick="irPara(1)"></span>
-                        <span class="indicador" onclick="irPara(2)"></span>
-                        <span class="indicador" onclick="irPara(3)"></span>
-                        <span class="indicador" onclick="irPara(4)"></span>
-                        <span class="indicador" onclick="irPara(5)"></span>
-                    </div>
                 </div>
             </div>
 
@@ -56,23 +46,18 @@
 
     <script>
         let indiceAtual = 0;
-        let tempo = 5000; // Muda a imagem a cada 5 segundos
-        let intervalo;
         let touchStartX = 0;
         let touchEndX = 0;
 
         const imagens = document.querySelectorAll('.carousel img');
-        const indicadores = document.querySelectorAll('.indicador');
         const carousel = document.querySelector('.carousel');
 
         function mostrarImagem(indice) {
             // Remove a classe 'ativa' de todas as imagens
             imagens.forEach(img => img.classList.remove('ativa'));
-            indicadores.forEach(ind => ind.classList.remove('ativo'));
 
             // Adiciona a classe 'ativa' à imagem atual
             imagens[indice].classList.add('ativa');
-            indicadores[indice].classList.add('ativo');
         }
 
         function mudarImagem(direcao) {
@@ -88,24 +73,6 @@
             }
 
             mostrarImagem(indiceAtual);
-            reiniciarTempo();
-        }
-
-        function irPara(indice) {
-            indiceAtual = indice;
-            mostrarImagem(indiceAtual);
-            reiniciarTempo();
-        }
-
-        function autoPlay() {
-            intervalo = setInterval(() => {
-                mudarImagem(1);
-            }, tempo);
-        }
-
-        function reiniciarTempo() {
-            clearInterval(intervalo);
-            autoPlay();
         }
 
         // Detectar Swipe no celular
@@ -129,8 +96,8 @@
             }
         }
 
-        // Inicia o carousel
-        autoPlay();
+        // Exibir a primeira imagem ao carregar
+        mostrarImagem(0);
     </script>
 </body>
 </html>
