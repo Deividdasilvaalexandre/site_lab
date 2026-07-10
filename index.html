@@ -1,108 +1,573 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./style.css">
+
     <title>Circuitos</title>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a href="index.html">Circuitos</a>
-            <a href="funcionamento.html">Lógica</a>
-            <a href="tia.html">Tia Portal</a>
-        </nav>
-    </header>
-    <main>
-        <p>
-        A simulação a seguir demonstra o ligamento de uma lâmpada (LED) utilizando botoeiras (botões).
-        <div>
-            <video src="./videos/Gravação de Tela 2026-06-02 143837.mp4" controls width="340px" height="360px"></video>
-        </div>
-        Ela funciona ligando um fio do 24V até o botão 1 em NF (normalmente fechado), no qual quando se aperta o próprio, ele abre a corrente em volts para a energia passar pelos fios do LED e poder ligá-lo e desligar logo após despressionar o botão.
-        </p><br>
-        <hr>
-        <p>
-            A simulação a seguir demonstrará o ligamento de uma lâmpada utilizando um disjuntor e uma botoeira, igual ao exemplo anterior.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 144107.mp4" controls width="340px" height="360px"></video>
-            </div>
-            Ela funciona quase igual ao circuito anterior, entretanto, você deve inicialmente ligar o disjuntor para que seja possível realizar tal exemplo, todavia, caso o operador não ligue o disjuntosm, o sistema não funcionará como desejado.
-        </p><br>
-        <p>
-            Na simulação a seguir será demonstrado o ligamento e desligamento de dois LEDs utilizando uma única botoeira.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 144438.mp4" controls width="340px" height="360px"></video>
-            </div>
-            Ela trata dos dois LEDs para um ligar e o outro desligar e vice-versa, que, ao apertar o botão, o LED 2 seja ligado e o LED 1 seja desligado, pois a corrente irá parar de passar pelo fio ligante ao LED 1 e o botão, e a corrente passa pelo fio ligante ao LED 2, e caso o operador pare de pressionar o botão, o LED 1 se acenderá novamente enquanto o LED 2 desliga.
-        </p><br>
-        <p>
-            Na simulação a seguir será demonstrado o ligamento e desligamento de um contator e de um LED utilizando uma única botoeira.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 144638.mp4" controls width="340ox" height="360px"></video>
-            </div>
-            O circuito trata do acionamento simultâneo do contator e da sua sinalização: ao apertar o botão 1, o Contator 1 e o LED 1 são ligados. Isso ocorre porque o botão fecha o circuito, permitindo que a corrente passe pelo fio ligante até a bobina do contator e, ao mesmo tempo, através do contato auxiliar, a corrente passa pelo fio ligante ao LED 1. Caso o operador pare de pressionar o botão, o fluxo de corrente é interrompido, fazendo com que o contator desligue e o LED 1 se apague novamente.
-        </p><br>
-        <p>
-            O sistema a seguir mostrará o acionamento de dois LEDs com um Contator, onde um estará ligado enquanto o outro estará desligado.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 144818.mp4" controls width="340ox" height="360px"></video>
-            </div>
-            Ele funciona com um único botão, que será o interruptor do sistema para desligar e ligar cada LED simultaneamente, enquanto o Contador é o contato NA e NF, de acordo com a nomenclatura padrão, 13 e 14 são ambos NF, enquanto 21 e 22 são ambos NA, você identifica vendo o número final, se terminado em 3 ou 4, é um NF, se terminado em 1 ou 2, é um NA. Quando o botão está em repouso, o LED 1 está ligado enquanto o LED 2 está desligado, já quando o botão é pressionado, o LED 1 se apaga e o LED 2 se acende.
-        </p><br>
-        <p>
-            Na simulação seguinte você verá o acionamento de um LED utilizando dois botões para ligar e desligar ele.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 145043.mp4" controls width="340ox" height="360px"></video>
-            </div>
-            Ela demonstra um botão ligando o LED 1 ao pressionar ele, e mesmo que o cliente solte, o LED se manterá aceso. Para que ele desligue, seu cliente deve pressionar o botão 1 para que o LED se apague.
-        </p><br>
-        <p>
-            Na seguinte simulação será demonstrada o acionamento de dois LEDs com duas botoeiras e o desligamento com uma botoeira, 
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 145429.mp4" controls width="340px" height="360px"></video>
-            </div>
-            Seu funcionamento é com dois botões NF, que, ao ligarem, a energia passa pelo contator e ele liga o LED correspondente ao botão pressionado. Após o usuário ligar um dos LEDs, se pressionar outro botão esse mesmo LED irá desligar enquanto o outro irá ligar. Para desligar os LEDs sem ter que ligar o outro basta que o usuário pressione o botão 1 que ele para de passar a energia para os botões e os LEDs serão desligados.
-        </p><br>
-        <p>
-            Na simulação a seguir demonstrará o funcionamento do Relé Temporizador para ligar o LED, no qual ele mantém a energia passando por ele durante determinado tempo até que ele desligue.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 152453.mp4" controls width="340ox" height="360px"></video>
-            </div>
-            Ela funciona quando o botão 2 é ligado e a corrente passa pelo contator e em seguida pelo relé temporizador, que demora 2 segundos para ligar e depois desligar o LED, mas que pode ser alterado em um CLP para um tempo maior ou menor, da preferência do cliente.
-        </p><br>
-        <p>
-            No sistema a seguir irá ser demonstrado o funcionamento do botão de emergência em um circuito de ligar um LED com botão NF e NA.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 152722.mp4" controls width="340px" height="360px"></video>
-            </div> 
-            O botão de emergência serve para interromper a passagem de corrente apertando o botão apenas uma vez, durante o tempo em que o circuito está em funcionamento até o momento em que a pessoa pressione ele novamente.
-        </p><br>
-        <p>
-            No circuito a seguir demonstra como funciona o motor juntamente do programa.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 153037.mp4" controls width="340px" height="360px"></video>
-            </div>
-            O motor se mantém desligado até o LED ligar no momento em que o botão 1 seja apertado, e ao mesmo tempo o motor começará a girar até o desligamento do LED pressionando o botão 2.
-        </p><br>
-        <p>
-            No circuito seguinte mostrará o ligamento de dois LEDs distintos utilizando dois botões para ligar um deles e um botão para desligar.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 153526.mp4" controls width="340px" height="360px"></video>
-            </div>
-            O circuito funciona a partir do ligamento de cada LED que encontra a corrente com um botão específico, e ao pressionar um dos botões o seu LED correspondente ligará, e para desligar o mesmo LED basta presisonar o botão 1.
-        </p><br>
-        <p>
-            No programa a seguir irá demonstrar o giro do motor em direções contrárias, para frente e para trás, ou para os lados dependendo de sua visão.
-            <div>
-                <video src="./videos/Gravação de Tela 2026-06-02 153916.mp4" controls width="340px" height="360px"></video>
-            </div>
-            Ele funciona quando o botão 2, que acende o LED verde é pressionado o motor começa a girar em sentido horário, e para fazer ele girar para o sentido anti-horário o usuário deve desligar o LED e acender o LED seguinte no botão 3 para fazer girar no sentido inverso, pois o motor precisa parar de girar para um dos lados para poder girar para o lado inverso.
-        </p><br>
-    </main>
-    <footer>
-        By Deivid &copy; &trade;
-    </footer>
+
+<header>
+    <nav>
+        <a href="index.html">Circuitos</a>
+        <a href="tia.html">Tia Portal</a>
+    </nav>
+</header>
+
+
+<main>
+
+<h1>Circuitos</h1>
+
+
+<div class="botoes">
+
+    <button onclick="mostrar('externo')">
+        Visão Externa
+    </button>
+
+    <button onclick="mostrar('interno')">
+        Funcionamento Interno
+    </button>
+
+</div>
+
+
+<section id="externo">
+
+<h2>Visão Externa</h2>
+
+
+<p>
+    A simulação a seguir demonstra o ligamento de uma lâmpada (LED)
+    utilizando botoeiras (botões).
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 143837.mp4">
+    </video>
+</div>
+
+<p>
+    Ela funciona ligando um fio do 24V até o botão 1 em NF
+    (normalmente fechado), no qual quando se aperta o próprio,
+    ele abre a corrente em volts para a energia passar pelos fios
+    do LED e poder ligá-lo e desligar logo após despressionar o botão.
+</p>
+
+
+<hr>
+
+
+<p>
+    A simulação a seguir demonstrará o ligamento de uma lâmpada utilizando
+    um disjuntor e uma botoeira, igual ao exemplo anterior.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 144107.mp4">
+    </video>
+</div>
+
+<p>
+    Ela funciona quase igual ao circuito anterior, entretanto, deve-se
+    inicialmente ligar o disjuntor para que seja possível realizar o exemplo.
+    Caso o operador não ligue o disjuntor, o sistema não funcionará.
+</p>
+
+
+<hr>
+
+
+<p>
+    Na simulação a seguir será demonstrado o ligamento e desligamento de
+    dois LEDs utilizando uma única botoeira.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 144438.mp4">
+    </video>
+</div>
+
+<p>
+    Ela trata dos dois LEDs para um ligar e o outro desligar e vice-versa.
+    Ao apertar o botão, o LED 2 é ligado e o LED 1 é desligado, pois a
+    corrente muda seu caminho dentro do circuito.
+</p>
+
+
+<hr>
+
+
+<p>
+    Na simulação seguinte será demonstrado o ligamento e desligamento de
+    um contator e de um LED utilizando uma única botoeira.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 144638.mp4">
+    </video>
+</div>
+
+<p>
+    O circuito trata do acionamento simultâneo do contator e sua sinalização.
+    Ao apertar o botão 1, o Contator 1 e o LED 1 são ligados.
+</p>
+
+
+<hr>
+
+
+<p>
+    O sistema a seguir mostrará o acionamento de dois LEDs com um Contator,
+    onde um estará ligado enquanto o outro estará desligado.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 144818.mp4">
+    </video>
+</div>
+
+<p>
+    Ele funciona com um único botão, que será o interruptor do sistema para
+    desligar e ligar cada LED simultaneamente utilizando os contatos NA e NF.
+</p>
+
+
+<hr>
+
+<p>
+    Na simulação seguinte será demonstrado o acionamento de um LED utilizando
+    dois botões para ligar e desligar ele.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 145043.mp4">
+    </video>
+</div>
+
+<p>
+    Ela demonstra um botão ligando o LED 1 ao ser pressionado, e mesmo que
+    o usuário solte o botão, o LED continuará aceso. Para desligar, deve-se
+    pressionar o botão responsável pelo desligamento.
+</p>
+
+
+<hr>
+
+
+<p>
+    Na seguinte simulação será demonstrado o acionamento de dois LEDs com
+    duas botoeiras e o desligamento utilizando uma botoeira.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 145429.mp4">
+    </video>
+</div>
+
+<p>
+    O funcionamento ocorre utilizando dois botões NF, que ao serem acionados
+    permitem a passagem da corrente pelo contator e ligam o LED correspondente.
+    Para desligar os LEDs sem ligar outro, basta pressionar o botão de desligamento.
+</p>
+
+
+<hr>
+
+
+<p>
+    Na simulação a seguir será demonstrado o funcionamento do Relé Temporizador
+    para ligar o LED, mantendo a energia durante determinado tempo até desligá-lo.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 152453.mp4">
+    </video>
+</div>
+
+<p>
+    Ela funciona quando o botão é ligado e a corrente passa pelo contator e
+    pelo relé temporizador. Após o tempo configurado, o relé altera seu estado
+    e desliga o LED. Esse tempo pode ser configurado em um CLP.
+</p>
+
+
+<hr>
+
+
+<p>
+    No sistema a seguir será demonstrado o funcionamento do botão de emergência
+    em um circuito de ligar um LED com botão NF e NA.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 152722.mp4">
+    </video>
+</div>
+
+<p>
+    O botão de emergência serve para interromper a passagem de corrente do
+    circuito. Ele permanece acionado até que o operador faça o destravamento.
+</p>
+
+
+<hr>
+
+
+<p>
+    No circuito a seguir será demonstrado o funcionamento de um motor juntamente
+    do programa de acionamento.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 153037.mp4">
+    </video>
+</div>
+
+<p>
+    O motor permanece desligado até o momento em que o botão é pressionado.
+    Após o acionamento, o motor começa a girar juntamente com a sinalização
+    do LED, sendo desligado através do botão de parada.
+</p>
+
+
+<hr>
+
+
+<p>
+    No circuito seguinte será mostrado o ligamento de dois LEDs distintos
+    utilizando dois botões para ligar um deles e um botão para desligar.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 153526.mp4">
+    </video>
+</div>
+
+<p>
+    O circuito funciona através do acionamento individual de cada LED por
+    seus respectivos botões. Para desligar o LED ligado, basta pressionar
+    o botão responsável pela parada.
+</p>
+
+
+<hr>
+
+
+<p>
+    No programa a seguir será demonstrado o giro do motor em direções contrárias,
+    para frente e para trás.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-02 153916.mp4">
+    </video>
+</div>
+
+<p>
+    O funcionamento acontece através de dois acionamentos diferentes.
+    Um botão faz o motor girar em um sentido e outro botão faz o motor girar
+    no sentido contrário. O motor precisa parar antes de inverter a direção.
+</p>
+
+
+<hr>
+
+</section>
+
+<section id="interno" style="display:none;">
+
+<h2>Funcionamento Interno</h2>
+
+
+<p>
+    No programa a seguir será mostrado a lógica por trás do primeiro circuito
+    anterior.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 140456.mp4">
+    </video>
+</div>
+
+<p>
+    O funcionamento do programa é simples. No momento em que a pessoa
+    pressiona B1, a corrente elétrica de 24 volts começa a fluir pelos fios
+    e liga o LED.
+</p>
+
+
+<hr>
+
+
+<p>
+    No programa seguinte o circuito adiciona o Disjuntor (D1) ao programa
+    para controlar a passagem de corrente.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 140704.mp4">
+    </video>
+</div>
+
+<p>
+    Ao acionar o Disjuntor, a corrente passa a fluir pelos fios e,
+    posteriormente, após o cliente pressionar o botão, a corrente passa por
+    ele e acende o LED.
+</p>
+
+
+<hr>
+
+
+<p>
+    No seguinte programa o circuito aciona dois LEDs independentes utilizando
+    como base o Disjuntor.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 140934.mp4">
+    </video>
+</div>
+
+<p>
+    Ao acionar o Disjuntor, a corrente flui pelo circuito. Um dos LEDs já
+    permanece ligado devido ao contato utilizado, enquanto o segundo LED é
+    acionado quando o botão correspondente é pressionado.
+</p>
+
+
+<hr>
+
+
+<p>
+    No circuito seguinte será utilizado o Contator K1, utilizando A1 e A2
+    para acionar a bobina e os contatos auxiliares para controlar o LED.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 141211.mp4">
+    </video>
+</div>
+
+<p>
+    Após o Disjuntor ser ligado, a corrente passa pelo circuito. Quando o botão
+    é acionado, a corrente chega até a bobina K1 A1 e A2, magnetizando o
+    contator e alterando seus contatos auxiliares.
+</p>
+
+
+<hr>
+
+
+<p>
+    No circuito a seguir será demonstrado o funcionamento dos contatos NA e NF
+    do Contator para ligar um LED.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 141456.mp4">
+    </video>
+</div>
+
+<p>
+    Após o acionamento do disjuntor, um LED permanece ligado através do contato
+    utilizado. Ao pressionar o botão, o contator altera seus contatos e muda o
+    funcionamento do circuito.
+</p>
+
+
+<hr>
+
+<p>
+    No programa a seguir o LED permanece aceso mesmo que o usuário tenha
+    despressionado o botão.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 143350.mp4">
+    </video>
+</div>
+
+<p>
+    Ao acionar o disjuntor, a corrente elétrica passa pelo circuito. Quando
+    o usuário aperta o botão, a energia passa pela bobina do contator,
+    magnetizando-a e fazendo com que os contatos auxiliares se fechem.
+    Dessa forma, após soltar o botão, a corrente continua passando e mantém
+    o LED ligado até que o botão de desligamento seja pressionado.
+</p>
+
+
+<hr>
+
+
+<p>
+    No programa seguinte será ligado dois LEDs utilizando dois Contatores
+    através do pressionamento de determinados botões.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 145252.mp4">
+    </video>
+</div>
+
+<p>
+    Ao pressionar o botão responsável pelo LED 1, a corrente passa pelo botão
+    e pelo contator, que permanece acionado devido à magnetização da bobina.
+    Quando outro botão é pressionado, o primeiro contator é desligado e o
+    segundo LED é acionado.
+</p>
+
+
+<hr>
+
+
+<p>
+    Na simulação seguinte será demonstrado o funcionamento de dois relés
+    temporizadores com um LED.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 152944.mp4">
+    </video>
+</div>
+
+<p>
+    Após o acionamento do botão com o disjuntor ligado, a corrente passa pelo
+    circuito até chegar ao relé temporizador. O relé aguarda o tempo configurado
+    antes de alterar seus contatos e permitir o acionamento do próximo estágio
+    do circuito.
+</p>
+
+
+<hr>
+
+
+<p>
+    Na seguinte simulação será demonstrado o funcionamento do botão de
+    emergência para parar todo o circuito elétrico.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 153752.mp4">
+    </video>
+</div>
+
+<p>
+    O botão de emergência tem a função de interromper imediatamente a passagem
+    de corrente do circuito em situações de falha ou perigo. Ao ser acionado,
+    ele impede que a energia continue passando pelos componentes.
+</p>
+
+
+<hr>
+
+
+<p>
+    No circuito a seguir será demonstrado o funcionamento dos circuitos de
+    potência e de comando utilizando um motor.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 161929.mp4">
+    </video>
+</div>
+
+<p>
+    O circuito de potência é responsável pela alimentação do motor, enquanto
+    o circuito de comando controla o acionamento dos componentes. Primeiro é
+    necessário testar o circuito de comando para garantir que não existam
+    falhas antes de energizar a parte de potência.
+</p>
+
+
+<hr>
+
+
+<p>
+    No devido circuito será demonstrado o funcionamento de desligar um LED e
+    ligar outro utilizando um contator.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-06-15 163109.mp4">
+    </video>
+</div>
+
+<p>
+    Após o usuário pressionar o botão 2, a energia passa pelo circuito e
+    aciona o contator. O contato auxiliar mantém o circuito ligado até que
+    o botão de desligamento seja pressionado, interrompendo a corrente.
+</p>
+
+
+<hr>
+
+
+<p>
+    No circuito seguinte será demonstrado o funcionamento do motor girando em
+    sentido horário e anti-horário dependendo do botão pressionado.
+</p>
+
+<div class="video-container">
+    <video controls>
+        <source src="./videos/Gravação de Tela 2026-07-10 144235.mp4">
+    </video>
+</div>
+
+<p>
+    O funcionamento é baseado na inversão do sentido de rotação do motor.
+    Um contator realiza o acionamento para um sentido e outro contator realiza
+    a inversão das fases para que o motor gire no sentido contrário.
+    É necessário impedir que os dois contatores sejam acionados ao mesmo tempo,
+    evitando curto-circuito no sistema.
+</p>
+
+<hr>
+
+</section>
+
+
+</main>
+
+
+<footer>
+    By Deivid &copy; &trade;
+</footer>
+
+
+<script src="./script.js"></script>
+
+
 </body>
+
 </html>

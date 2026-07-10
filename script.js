@@ -36,3 +36,12 @@ anterior.addEventListener("click", () => {
 
     atualizarImagem();
 });
+
+function mostrar(secao){
+
+    document.getElementById("externo").style.display = "none";
+    document.getElementById("interno").style.display = "none";
+
+    document.getElementById(secao).style.display = "block";
+
+}
