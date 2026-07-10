@@ -20,28 +20,8 @@
     <main>
 
         <p>
-            Para entender como funciona a parte de funcionamento do sistema e a implementação do CLP, é necessário usar o Tia Portal para compreender seus conceitos, e abaixo estará o process[...]
-            
-            <!-- CAROUSEL DE IMAGENS -->
-            <div class="carousel-container">
-                <div class="carousel">
-                    <img src="./imagens/Captura de tela 2026-07-03 142416.png" alt="Tia Portal 1" class="ativa">
-                    <img src="./imagens/Captura de tela 2026-07-03 142450.png" alt="Tia Portal 2">
-                    <img src="./imagens/Captura de tela 2026-07-03 142514.png" alt="Tia Portal 3">
-                    <img src="./imagens/Captura de tela 2026-07-03 142608.png" alt="Tia Portal 4">
-                    <img src="./imagens/Captura de tela 2026-07-03 142622.png" alt="Tia Portal 5">
-                    <img src="./imagens/Captura de tela 2026-07-03 142635.png" alt="Tia Portal 6">
-
-                    <!-- Botões de navegação -->
-                    <button class="botao botao-anterior" onclick="mudarImagem(-1)">❮</button>
-                    <button class="botao botao-proximo" onclick="mudarImagem(1)">❯</button>
-                </div>
-            </div>
-
-            Após ter feito todos os passos ilustrados nas imagens, você pode começar a fazer alguns programas simples, e abaixo estarão alguns exemplos.
-        </p><br>
-        <p>
-            
+            Para entender como funciona a implementação do CLP, é necessário utilizar o
+            TIA Portal. Abaixo está o processo completo para acessar o aplicativo.
         </p>
 
         <div class="slider">
@@ -67,60 +47,7 @@
         By Deivid &copy; &trade;
     </footer>
 
-    <script>
-        let indiceAtual = 0;
-        let touchStartX = 0;
-        let touchEndX = 0;
+    <script src="script.js"></script>
 
-        const imagens = document.querySelectorAll('.carousel img');
-        const carousel = document.querySelector('.carousel');
-
-        function mostrarImagem(indice) {
-            // Remove a classe 'ativa' de todas as imagens
-            imagens.forEach(img => img.classList.remove('ativa'));
-
-            // Adiciona a classe 'ativa' à imagem atual
-            imagens[indice].classList.add('ativa');
-        }
-
-        function mudarImagem(direcao) {
-            indiceAtual += direcao;
-            
-            // Se passou do final, volta ao início
-            if (indiceAtual >= imagens.length) {
-                indiceAtual = 0;
-            }
-            // Se foi antes do início, vai para o final
-            else if (indiceAtual < 0) {
-                indiceAtual = imagens.length - 1;
-            }
-
-            mostrarImagem(indiceAtual);
-        }
-
-        // Detectar Swipe no celular
-        carousel.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        });
-
-        carousel.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            detectarSwipe();
-        });
-
-        function detectarSwipe() {
-            const diferenca = touchStartX - touchEndX;
-            
-            // Se deslizou mais de 50px, considera um swipe
-            if (diferenca > 50) {
-                mudarImagem(1); // Próxima
-            } else if (diferenca < -50) {
-                mudarImagem(-1); // Anterior
-            }
-        }
-
-        // Exibir a primeira imagem ao carregar
-        mostrarImagem(0);
-    </script>
 </body>
 </html>

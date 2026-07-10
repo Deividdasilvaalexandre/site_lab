@@ -24,3 +24,9 @@
 .slider button:hover{
     background-color: #ddd;
 }
+
+body{
+    background-color: cadetblue;
+    color: white;
+    font-size: 1.4rem;
+}
