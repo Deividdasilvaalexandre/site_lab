@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,13 +17,24 @@
             <a href="nome.html">Conceitos</a>
         </nav>
     </header>
-    
+
     <main>
 
+        <!-- TEXTO PRINCIPAL - FICA SEMPRE VISÍVEL -->
+
         <p>
-            Para entender como funciona a implementação do CLP, é necessário utilizar o
-            TIA Portal. Abaixo está o processo completo para acessar o aplicativo.
+            Para realizar a programação e a simulação de uma automação utilizando
+            a plataforma Siemens, o processo inicia-se com a estruturação do mapa
+            de memória do controlador. No TIA Portal, o primeiro passo consiste em
+            acessar o painel do projeto à esquerda e navegar até a pasta
+            <strong>PLC tags</strong>, abrindo a tabela padrão
+            <strong>Default tag table</strong>. É nesta interface que definimos
+            todos os endereços físicos de entradas, saídas e memórias internas
+            da aplicação.
         </p>
+
+
+        <!-- CARROSSEL DO TIA PORTAL -->
 
         <div class="slider">
 
@@ -36,31 +48,77 @@
 
         </div>
 
+
         <p>
-            Após realizar todos os passos mostrados nas imagens, você poderá começar
-            a desenvolver programas simples. Abaixo estarão alguns exemplos.
-        </p><br>
-        <hr>
-        <h1>Exemplo 1</h1>
-        <p>
-            O primeiro exemplo é um programa simples que liga o motor quando o botão de start é pressionado.
-        </p><br>
-        <div>
-            <img src="imagens/Captura de tela 2026-07-03 142912.png" controls width="340px" height="360px" alt="Exemplo 1">
-            <img src="imagens/Captura de tela 2026-07-03 143011.png" controls width="340px" height="360px" alt="Exemplo 1">
-            <img src="imagens/Captura de tela 2026-07-03 143024.png" controls width="340px" height="360px" alt="Exemplo 1">
-            <img src="imagens/Captura de tela 2026-07-03 143106.png" controls width="340px" height="360px" alt="Exemplo 1">
-        </div>
-        <hr>
-        <p>
-            
+            Após realizar todos os passos mostrados nas imagens, você poderá
+            começar a desenvolver programas simples. Abaixo estarão alguns exemplos.
         </p>
+
+        <br>
+        <hr>
+
+
+        <!-- EXEMPLO 1 -->
+
+        <h1>Exemplo 1</h1>
+
+        <p>
+            O primeiro exemplo é um programa simples que liga o motor quando
+            o botão liga é pressionado.
+        </p>
+
+        <br>
+
+
+        <!-- TEXTO + CARROSSEL DO EXEMPLO 1 -->
+
+        <div class="exemplo1">
+
+            <p id="textoExemplo1">
+                Em seguida, realiza-se a declaração detalhada das variáveis
+                (tags). Para este exemplo, foram criadas duas tags do tipo
+                booleano: a entrada de comando <strong>botao_liga</strong>,
+                associada ao endereço físico de entrada <strong>%I0.0</strong>,
+                e a saída de acionamento <strong>motor</strong>, associada ao
+                endereço <strong>%Q0.0</strong>. Após definir os tipos de dados
+                e os endereços correspondentes na tabela, a base da arquitetura
+                de sinal da CPU está concluída.
+            </p>
+
+
+            <div class="slider">
+
+                <button id="anteriorExemplo1">&#10094;</button>
+
+                <img id="imagemExemplo1"
+                    src="./imagens/Captura de tela 2026-07-03 142730.png"
+                    width="340px"
+                    height="360px"
+                    alt="Exemplo 1">
+
+                <button id="proximoExemplo1">&#10095;</button>
+
+            </div>
+
+        </div>
+
+
+        <hr>
+
+        <p>
+
+        </p>
+
     </main>
+
+
     <footer>
         By Deivid &copy; &trade;
     </footer>
 
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
