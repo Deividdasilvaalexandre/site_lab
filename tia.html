@@ -110,10 +110,43 @@
             O TIA Portal possui quatro tipos de programas principais, mas vamos citar apenas dois: Organization Block (OB) e Function Block (FB).
         </p>
         <hr>
-        <h2>Organization Block (OB)</h2>
+       <h2>Organization Block (OB)</h2>
         <p>
+            Os Organization Blocks (OBs) constituem a interface entre o sistema operacional da CPU e o programa de usuário nos PLCs da Siemens. Eles determinam a ordem e as condições em que partes específicas do código são executadas, sendo disparados por eventos como a varredura cíclica principal, interrupções temporizadas, eventos de hardware, processos de inicialização (Startup) ou tratamento de falhas e diagnósticos de rede.
+        </p><br>
+        <hr>
+        <h2>Function Block (FB)</h2>
+        <p>
+            Os Function Blocks (FB) são blocos de programa com memória própria, projetados para executar lógicas complexas e reutilizáveis na automação. Diferente de uma FC (Function), o FB armazena seus dados e o estado de suas variáveis em um Data Block de Instância (Instance DB) associado, permitindo que os valores retidos continuem disponíveis entre diferentes ciclos de varredura (ex.: temporizadores, contadores, estados de sequenciamento e controle de motores).
+        </p><br>
+        <hr>
+        <h3>Guia Prático de Funções do Siemens (TIA Portal)</h3>
 
-        </p>
+<p>
+    Texto principal do Guia Prático.
+</p>
+
+<div class="carrossel">
+
+    <p id="textoExemplo">
+        Texto 1
+    </p>
+
+    <div class="slider">
+
+        <button id="anteriorExemplo">&#10094;</button>
+
+        <img id="imagemExemplo"
+            src="./img/Captura de tela 2026-08-14 141557.png"
+            width="340px"
+            height="360px"
+            alt="Imagem 1">
+
+        <button id="proximoExemplo">&#10095;</button>
+
+    </div>
+
+</div>
     </main>
 
 

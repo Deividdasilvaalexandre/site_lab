@@ -3,12 +3,12 @@
 // ==================================================
 
 const imagens = [
-    "./imagens/Captura de tela 2026-07-03 142416.png",
-    "./imagens/Captura de tela 2026-07-03 142450.png",
-    "./imagens/Captura de tela 2026-07-03 142514.png",
-    "./imagens/Captura de tela 2026-07-03 142608.png",
-    "./imagens/Captura de tela 2026-07-03 142622.png",
-    "./imagens/Captura de tela 2026-07-03 142635.png"
+    "./img/Captura de tela 2026-07-03 142416.png",
+    "./img/Captura de tela 2026-07-03 142450.png",
+    "./img/Captura de tela 2026-07-03 142514.png",
+    "./img/Captura de tela 2026-07-03 142608.png",
+    "./img/Captura de tela 2026-07-03 142622.png",
+    "./img/Captura de tela 2026-07-03 142635.png"
 ];
 
 let indice = 0;
@@ -17,9 +17,13 @@ const imagem = document.getElementById("imagem");
 const anterior = document.getElementById("anterior");
 const proximo = document.getElementById("proximo");
 
+
 function atualizarImagem() {
+
     imagem.src = imagens[indice];
+
 }
+
 
 proximo.addEventListener("click", () => {
 
@@ -32,6 +36,7 @@ proximo.addEventListener("click", () => {
     atualizarImagem();
 
 });
+
 
 anterior.addEventListener("click", () => {
 
@@ -52,14 +57,14 @@ anterior.addEventListener("click", () => {
 
 const imagensExemplo1 = [
 
-    "./imagens/Captura de tela 2026-07-03 142730.png",
-    "./imagens/Captura de tela 2026-07-03 142815.png",
-    "./imagens/Captura de tela 2026-07-03 142912.png",
-    "./imagens/Captura de tela 2026-07-03 143011.png",
-    "./imagens/Captura de tela 2026-07-03 143024.png",
-    "./imagens/Captura de tela 2026-07-03 143106.png",
-    "./imagens/Captura de tela 2026-07-03 143156.png",
-    "./imagens/Captura de tela 2026-07-03 143333.png"
+    "./img/Captura de tela 2026-07-03 142730.png",
+    "./img/Captura de tela 2026-07-03 142815.png",
+    "./img/Captura de tela 2026-07-03 142912.png",
+    "./img/Captura de tela 2026-07-03 143011.png",
+    "./img/Captura de tela 2026-07-03 143024.png",
+    "./img/Captura de tela 2026-07-03 143106.png",
+    "./img/Captura de tela 2026-07-03 143156.png",
+    "./img/Captura de tela 2026-07-03 143333.png"
 
 ];
 
@@ -83,13 +88,17 @@ const textosExemplo1 = [
     `Por fim, insere-se as variáveis botao_liga e motor dentro da SimTable recém-criada e ativa-se o modo de monitoramento no TIA Portal clicando no ícone dos óculos (Monitoring ON/OFF). Ao alterar o estado da entrada botao_liga para TRUE dentro da SimTable, observa-se em tempo real na tela do Main [OB1] a linha do circuito em Ladder ficar verde, confirmando que o sinal passou pelo contato e acionou com sucesso a saída motor.`,
 
     `Após a execução do teste, verifica-se o comportamento do programa e confirma-se que a lógica implementada corresponde ao funcionamento esperado. O acionamento da entrada botao_liga provoca a energização da saída motor, permitindo validar a comunicação entre a lógica Ladder e o controlador simulado.`
+
 ];
 
 
 let indiceExemplo1 = 0;
 
-const imagemExemplo1 = document.getElementById("imagemExemplo1");
-const textoExemplo1 = document.getElementById("textoExemplo1");
+const imagemExemplo1 =
+    document.getElementById("imagemExemplo1");
+
+const textoExemplo1 =
+    document.getElementById("textoExemplo1");
 
 const anteriorExemplo1 =
     document.getElementById("anteriorExemplo1");
@@ -98,13 +107,15 @@ const proximoExemplo1 =
     document.getElementById("proximoExemplo1");
 
 
-// ATUALIZA IMAGEM E TEXTO AO MESMO TEMPO
+// ATUALIZA IMAGEM E TEXTO
 
 function atualizarExemplo1() {
 
-    imagemExemplo1.src = imagensExemplo1[indiceExemplo1];
+    imagemExemplo1.src =
+        imagensExemplo1[indiceExemplo1];
 
-    textoExemplo1.innerHTML = textosExemplo1[indiceExemplo1];
+    textoExemplo1.textContent =
+        textosExemplo1[indiceExemplo1];
 
 }
 
@@ -152,3 +163,92 @@ function mostrar(secao) {
     document.getElementById(secao).style.display = "block";
 
 }
+
+
+// ==================================================
+// CARROSSEL 3 - ORGANIZATION BLOCK (OB)
+// ==================================================
+
+const imagensOB = [
+
+    "./img/Captura de tela 2026-08-14 141557.png",
+    "./img/Captura de tela 2026-08-14 141611.png",
+    "./img/Captura de tela 2026-08-14 141620.png",
+    "./img/Captura de tela 2026-08-14 141631.png",
+    "./img/Captura de tela 2026-08-14 141751.png",
+    "./img/Captura de tela 2026-08-14 141802.png"
+
+];
+
+
+const textosOB = [
+
+    "Texto 1",
+    "Texto 2",
+    "Texto 3",
+    "Texto 4"
+
+];
+
+
+let indiceOB = 0;
+
+
+const imagemOB =
+    document.getElementById("imagemExemplo");
+
+const textoOB =
+    document.getElementById("textoExemplo");
+
+const anteriorOB =
+    document.getElementById("anteriorExemplo");
+
+const proximoOB =
+    document.getElementById("proximoExemplo");
+
+
+// ATUALIZA IMAGEM E TEXTO
+
+function atualizarOB() {
+
+    imagemOB.src =
+        imagensOB[indiceOB];
+
+    if (textosOB[indiceOB] !== undefined) {
+
+        textoOB.textContent =
+            textosOB[indiceOB];
+
+    }
+
+}
+
+
+// BOTÃO PRÓXIMO
+
+proximoOB.addEventListener("click", () => {
+
+    indiceOB++;
+
+    if (indiceOB >= imagensOB.length) {
+        indiceOB = 0;
+    }
+
+    atualizarOB();
+
+});
+
+
+// BOTÃO ANTERIOR
+
+anteriorOB.addEventListener("click", () => {
+
+    indiceOB--;
+
+    if (indiceOB < 0) {
+        indiceOB = imagensOB.length - 1;
+    }
+
+    atualizarOB();
+
+});
