@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,9 @@
     <title>Tia Portal</title>
 </head>
 
+
 <body>
+
 
     <header>
         <nav>
@@ -18,34 +21,26 @@
         </nav>
     </header>
 
+
     <main>
 
-        <!-- TEXTO PRINCIPAL - FICA SEMPRE VISÍVEL -->
 
+        <!-- TEXTO PRINCIPAL -->
         <p>
             Para realizar a programação e a simulação de uma automação utilizando
             a plataforma Siemens, o processo inicia-se com a estruturação do mapa
             de memória do controlador. No TIA Portal, o primeiro passo consiste em
             acessar o painel do projeto à esquerda e navegar até a pasta
-            PLC tags, abrindo a tabela padrão
-            Default tag table. É nesta interface que definimos
-            todos os endereços físicos de entradas, saídas e memórias internas
-            da aplicação.
+            PLC tags, abrindo a tabela padrão Default tag table. É nesta interface que definimos
+            todos os endereços físicos de entradas, saídas e memórias internas da aplicação.
         </p>
 
 
-        <!-- CARROSSEL DO TIA PORTAL -->
-
+        <!-- CARROSSEL 1: TIA PORTAL PASSO A PASSO -->
         <div class="slider">
-
             <button id="anterior">&#10094;</button>
-
-            <img id="imagem"
-                src="./img/Captura de tela 2026-07-03 142416.png"
-                alt="Passo do TIA Portal">
-
+            <img id="imagem" src="./img/Captura de tela 2026-07-03 142416.png" alt="Passo do TIA Portal">
             <button id="proximo">&#10095;</button>
-
         </div>
 
 
@@ -54,99 +49,154 @@
             começar a desenvolver programas simples. Abaixo estarão alguns exemplos.
         </p>
 
+
         <br>
         <hr>
 
 
         <!-- EXEMPLO 1 -->
-
         <h1>Exemplo 1</h1>
-
         <p>
-            O primeiro exemplo é um programa simples que liga o motor quando
-            o botão liga é pressionado.
+            O primeiro exemplo é um programa simples que liga o motor quando o botão liga é pressionado.
         </p>
-
         <br>
 
 
         <!-- TEXTO + CARROSSEL DO EXEMPLO 1 -->
-
         <div class="exemplo1">
-
             <p id="textoExemplo1">
-                Em seguida, realiza-se a declaração detalhada das variáveis
-                (tags). Para este exemplo, foram criadas duas tags do tipo
-                booleano: a entrada de comando botao_liga,
-                associada ao endereço físico de entrada %I0.0,
-                e a saída de acionamento motor, associada ao
-                endereço %Q0.0. Após definir os tipos de dados
-                e os endereços correspondentes na tabela, a base da arquitetura
-                de sinal da CPU está concluída.
+                Em seguida, realiza-se a declaração detalhada das variáveis (tags)...
             </p>
 
 
             <div class="slider">
-
                 <button id="anteriorExemplo1">&#10094;</button>
-
-                <img id="imagemExemplo1"
-                    src="./img/Captura de tela 2026-07-03 142730.png"
-                    width="340px"
-                    height="360px"
-                    alt="Exemplo 1">
-
+                <img id="imagemExemplo1" src="./img/Captura de tela 2026-07-03 142730.png" width="340" height="360" alt="Exemplo 1">
                 <button id="proximoExemplo1">&#10095;</button>
-
             </div>
-
         </div>
 
 
         <hr>
+
 
         <h2>Blocos de Programa</h2>
         <p>
             O TIA Portal possui quatro tipos de programas principais, mas vamos citar apenas dois: Organization Block (OB) e Function Block (FB).
         </p>
         <hr>
-       <h2>Organization Block (OB)</h2>
+
+
+        <h2>Organization Block (OB)</h2>
+        <div class="icone-bloco">
+            <img src="./img/Captura de tela 2026-08-14 154410.png" alt="Símbolo Organization Block (OB)">
+        </div>
         <p>
             Os Organization Blocks (OBs) constituem a interface entre o sistema operacional da CPU e o programa de usuário nos PLCs da Siemens. Eles determinam a ordem e as condições em que partes específicas do código são executadas, sendo disparados por eventos como a varredura cíclica principal, interrupções temporizadas, eventos de hardware, processos de inicialização (Startup) ou tratamento de falhas e diagnósticos de rede.
-        </p><br>
+        </p>
+        <br>
         <hr>
+
+
         <h2>Function Block (FB)</h2>
+        <div class="icone-bloco">
+            <img src="./img/Captura de tela 2026-08-14 154415.png" alt="Símbolo Function Block (FB)">
+        </div>
         <p>
             Os Function Blocks (FB) são blocos de programa com memória própria, projetados para executar lógicas complexas e reutilizáveis na automação. Diferente de uma FC (Function), o FB armazena seus dados e o estado de suas variáveis em um Data Block de Instância (Instance DB) associado, permitindo que os valores retidos continuem disponíveis entre diferentes ciclos de varredura (ex.: temporizadores, contadores, estados de sequenciamento e controle de motores).
-        </p><br>
+        </p>
+        <br>
         <hr>
+
+
         <h3>Guia Prático de Funções do Siemens (TIA Portal)</h3>
+        <p>
+            Abaixo estão organizadas as principais instruções em linguagem Ladder utilizadas na programação.
+        </p>
 
-<p>
-    Texto principal do Guia Prático.
-</p>
 
-<div class="carrossel">
+        <!-- SEÇÃO 1: COMPARADORES (CARROSSEL) -->
+        <section class="secao-funcoes">
+            <h4>1. Bloco de Comparadores</h4>
+            <p id="textoComp">Igualdade (==): Compara dois valores. A saída é ativada se IN1 for igual a IN2.</p>
+            <div class="slider">
+                <button id="anteriorComp">&#10094;</button>
+                <img id="imagemComp" src="./img/Captura de tela 2026-08-14 141557.png" width="340" height="360" alt="Comparador">
+                <button id="proximoComp">&#10095;</button>
+            </div>
+        </section>
 
-    <p id="textoExemplo">
-        Texto 1
-    </p>
 
-    <div class="slider">
+        <hr>
 
-        <button id="anteriorExemplo">&#10094;</button>
 
-        <img id="imagemExemplo"
-            src="./img/Captura de tela 2026-08-14 141557.png"
-            width="340px"
-            height="360px"
-            alt="Imagem 1">
+        <!-- SEÇÃO 2: TEMPORIZADORES (CARROSSEL) -->
+        <section class="secao-funcoes">
+            <h4>2. Temporizadores (Timers)</h4>
+            <p id="textoTimer">TON (Generate On-Delay): Retarda a energização da saída Q pelo tempo programado em PT.</p>
+            <div class="slider">
+                <button id="anteriorTimer">&#10094;</button>
+                <img id="imagemTimer" src="./img/Captura de tela 2026-08-14 141849.png" width="340" height="360" alt="Temporizador">
+                <button id="proximoTimer">&#10095;</button>
+            </div>
+        </section>
 
-        <button id="proximoExemplo">&#10095;</button>
 
-    </div>
+        <hr>
 
-</div>
+
+        <!-- SEÇÃO 3: CONTADORES (CARROSSEL) -->
+        <section class="secao-funcoes">
+            <h4>3. Contadores (Counters)</h4>
+            <p id="textoCounter">CTU (Count Up): Incrementar contador a cada borda de subida no pino CU.</p>
+            <div class="slider">
+                <button id="anteriorCounter">&#10094;</button>
+                <img id="imagemCounter" src="./img/Captura de tela 2026-08-14 141817.png" width="340" height="360" alt="Contador">
+                <button id="proximoCounter">&#10095;</button>
+            </div>
+        </section>
+
+
+        <hr>
+
+
+        <!-- SEÇÃO 4: MOVE (ISOLADO) -->
+        <section class="secao-funcoes">
+            <h4>4. Instrução de Movimentação (MOVE)</h4>
+            <p>MOVE: Copia o valor da entrada (IN) diretamente para a saída especificada (OUT1) quando a entrada EN for ativada.</p>
+            <div class="bloco-unico">
+                <img src="./img/Captura de tela 2026-08-14 141547.png" width="340" alt="Instrução MOVE">
+            </div>
+        </section>
+
+
+        <hr>
+
+
+        <!-- SEÇÃO 5: ELEMENTOS BÁSICOS (GRID) -->
+        <section class="secao-funcoes">
+            <h4>5. Entradas, Saídas e Bobinas Especializadas</h4>
+            <p>Elementos básicos de contato e acionamento por retenção (Set/Reset):</p>
+            <div class="grid-basicos">
+                <div class="card-basico">
+                    <h5>Contato NF</h5>
+                    <p>Atua invertendo o sinal de entrada (%I0.1 "BOTAO NF").</p>
+                    <img src="./img/Captura de tela 2026-08-14 141929.png" alt="Contato NF">
+                </div>
+                <div class="card-basico">
+                    <h5>Bobina SET (S)</h5>
+                    <p>Mantém a saída (%Q0.0 "SET") ativada em nível alto mesmo após o comando ser desativado.</p>
+                    <img src="./img/Captura de tela 2026-08-14 141913.png" alt="Bobina SET">
+                </div>
+                <div class="card-basico">
+                    <h5>Bobina RESET (R)</h5>
+                    <p>Desativa e força em nível baixo a saída retida (%Q0.1 "RESET").</p>
+                    <img src="./img/Captura de tela 2026-08-14 141920.png" alt="Bobina RESET">
+                </div>
+            </div>
+        </section>
+
+
     </main>
 
 
@@ -157,6 +207,9 @@
 
     <script src="script.js"></script>
 
+
 </body>
 
+
 </html>
+
